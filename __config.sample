@@ -1,0 +1,40 @@
+<?php
+	
+$domain='!DOMAIN';
+$db_name='!DBNAME';
+$deep_db_name='!DDBNAME';
+$db_user='!DBUSER';
+$db_pass='!DBPASS';
+$bot_token='!BOTTOKEN';
+$user_token='!USERTOKEN';
+$user_phone='!USERPHONE';
+$app_id='6';
+$app_hash='eb06d4abfb49dc3eeb1aeb98ae0f581e';
+$limitsize=(1.5 * 1024 * 1024 * 1024);
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************** این بخش را تغییر ندهید ********************************/
+$pwrtelegram_storage_domain = 'storage.'.$domain;
+$db_token = '';
+
+//$db = 'mysql:unix_socket=/var/run/mysqld/mysqld.sock;dbname='.$db_name;
+$db = 'mysql:unix_socket=/var/lib/mysql/mysql.sock;dbname='.$db_name;
+$dbuser = $db_user;
+$dbpassword = $db_pass;
+
+//$deepdb = 'mysql:unix_socket=/var/run/mysqld/mysqld.sock;dbname='.$deep_db_name;
+$deepdb = 'mysql:unix_socket=/var/lib/mysql/mysql.sock;dbname='.$deep_db_name;
+$deepdbuser = $db_user;
+$deepdbpassword = $db_pass;
+/****************** WeCan-Co.ir | @WeCanGP ********************************/
