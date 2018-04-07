@@ -54,17 +54,8 @@ function check_host(){
 		return true;
 	}else{
 		echo '<span style="color:red">متاسفانه این هاست مناسب نصب پاور نیست!<br>
-به هاستینگ خود بگویید که کد زیر را در بخش Custom Httpd Configurations برای دامنه شما قرار دهد:<br><br>
-<code style="color:black">
-&lt;FilesMatch "\.php$"&gt;
-    AddHandler x-httpd-php71 .php
-&lt;/FilesMatch&gt;
-</code>
-
 <br>
-<br>
-
-یا اگر هاست شما cpanel است. نسخه ی php هاست را روی نسخه 7 به بالا قرار دهید.
+'.$er.'
 		</span>';
 		$can_install =false;
 		return false;
