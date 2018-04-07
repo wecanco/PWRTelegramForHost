@@ -27,9 +27,7 @@ function check_host(){
 	global $can_install;
 	$rate=0;
 	$er='';
-	$file = "TestFile.txt";
-	file_put_contents($file,"@WeCanGP");
-	symlink($file,'link');
+	
 	
 	if(phpversion() >= 7){
 		$rate++;
@@ -42,6 +40,16 @@ function check_host(){
 	}else{
 		$er .= "هاست توابع مورد نیاز را پشتیبانی نمیکند. (shell_exec)<br>";
 	}
+	
+	if(function_exists('symlink')){
+		$file = "TestFile.txt";
+		file_put_contents($file,"@WeCanGP");
+		symlink($file,'link');
+		$rate++;	
+	}else{
+		$er .= "هاست توابع مورد نیاز را پشتیبانی نمیکند. (symlink)<br>";
+	}
+	
 	
 	//echo $er;
 	if($er==''){
