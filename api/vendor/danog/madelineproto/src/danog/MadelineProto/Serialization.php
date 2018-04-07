@@ -62,7 +62,10 @@ class Serialization
         $instance->serialized = time();
         $realpaths = self::realpaths($filename);
         if (!file_exists($realpaths['lockfile'])) {
-            touch($realpaths['lockfile']);
+			try{
+				touch($realpaths['lockfile']);
+			}catch(Exception $e){
+			}
             clearstatcache();
         }
         $realpaths['lockfile'] = fopen($realpaths['lockfile'], 'w');
