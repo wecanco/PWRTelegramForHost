@@ -40,7 +40,7 @@ function check_host(){
 	if(function_exists('shell_exec')){
 		$rate++;	
 	}else{
-		$er .= "هاست توابع مورد نیاز را پشتیبانی نمیکند.<br>";
+		$er .= "هاست توابع مورد نیاز را پشتیبانی نمیکند. (shell_exec)<br>";
 	}
 	
 	//echo $er;
