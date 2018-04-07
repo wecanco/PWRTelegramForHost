@@ -77,7 +77,7 @@ class Main extends Proxy
         $this->real_token = preg_replace(["/^\/bot/", "/^\/user/", "/^\/file\/bot/", "/\/.*/"], '', $_SERVER['REQUEST_URI']);
 
         // The url of this api
-        $this->pwrtelegram_api = 'https://'.$_SERVER['HTTP_HOST'].'/bot'.$this->real_token;
+        $this->pwrtelegram_api = 'http://'.$_SERVER['HTTP_HOST'].'/bot'.$this->real_token;
 
         $this->token = $this->real_token.($this->deep ? '/test' : '');
 
@@ -95,7 +95,7 @@ class Main extends Proxy
         // The url of the storage
         $this->pwrtelegram_storage_domain = ($this->deep ? 'deep' : '').($this->beta ? 'beta' : '').$this->pwrtelegram_storage_domain;
 
-        $this->pwrtelegram_storage = 'https://'.$this->pwrtelegram_storage_domain.'/';
+        $this->pwrtelegram_storage = 'http://'.$this->pwrtelegram_storage_domain.'/';
 
         $this->REQUEST = $_REQUEST;
 
@@ -247,6 +247,7 @@ class Main extends Proxy
 
     public function add_to_db($result, $photores = [])
     {
+		return true;
         if (!isset($this->db_token)) {
             return false;
         }
