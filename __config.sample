@@ -10,7 +10,7 @@ $user_token='!USERTOKEN';
 $user_phone='!USERPHONE';
 $app_id='6';
 $app_hash='eb06d4abfb49dc3eeb1aeb98ae0f581e';
-$limitsize=(1.5 * 1024 * 1024 * 1024);
+$limitsize=(1.46 * 1024 * 1024 * 1024);
 
 
 
@@ -29,12 +29,14 @@ $pwrtelegram_storage_domain = 'storage.'.$domain;
 $db_token = '';
 
 //$db = 'mysql:unix_socket=/var/run/mysqld/mysqld.sock;dbname='.$db_name;
-$db = 'mysql:unix_socket=/var/lib/mysql/mysql.sock;dbname='.$db_name;
+//$db = 'mysql:unix_socket=/var/lib/mysql/mysql.sock;dbname='.$db_name;
+$db = 'mysql:dbname='.$db_name.';host=localhost;port=3306';
 $dbuser = $db_user;
 $dbpassword = $db_pass;
 
 //$deepdb = 'mysql:unix_socket=/var/run/mysqld/mysqld.sock;dbname='.$deep_db_name;
-$deepdb = 'mysql:unix_socket=/var/lib/mysql/mysql.sock;dbname='.$deep_db_name;
+//$deepdb = 'mysql:unix_socket=/var/lib/mysql/mysql.sock;dbname='.$deep_db_name;
+$db = 'mysql:dbname='.$deep_db_name.';host=localhost;port=3306';
 $deepdbuser = $db_user;
 $deepdbpassword = $db_pass;
 /****************** WeCan-Co.ir | @WeCanGP ********************************/
