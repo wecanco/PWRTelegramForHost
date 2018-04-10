@@ -26,7 +26,7 @@
 	<?php
 		ini_set('display_errors', 1);
 		ini_set('display_startup_errors', 1);
-		error_reporting(E_ALL);
+		error_reporting(E_ERROR);
 		
 		function db_connect($db_user,$db_pass,$db_name){		
 			$con=mysqli_connect('localhost',$db_user,$db_pass,$db_name);
