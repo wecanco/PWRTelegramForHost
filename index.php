@@ -29,7 +29,7 @@ Options -Indexes
    #php_value max_input_vars 5000
    #php_value memory_limit 512M
    #php_value session.gc_maxlifetime 1440
-   #php_value session.save_path "/var/cpanel/php/sessions/ea-php70"
+   #php_value session.save_path \"/var/cpanel/php/sessions/ea-php70\"
    #php_value upload_max_filesize 1024M
 </IfModule>	
 		";
