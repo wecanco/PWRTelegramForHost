@@ -1,3 +1,3 @@
 # PWRTelegramForHost
-Download and Upload this, then run index.php file. ;)
+به دلایلی حذف شد
 Channel: @WeCanGP
